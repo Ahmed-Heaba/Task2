@@ -10,7 +10,8 @@ jobs:
         run: echo "hello world"
 
   job2:
-    runs-on: job1
+    needs: job1
+    runs-on: ubuntu-latest
     steps:
       - name: Print Welcome to NU
         run: echo "welcome to nu"
