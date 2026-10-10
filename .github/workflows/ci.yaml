@@ -1,1 +1,17 @@
+name: ci
+
+on: [push]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "hello world"
+
+  job2:
+    runs-on: job1
+    steps:
+      - name: Print Welcome to NU
+        run: echo "welcome to nu"
 
